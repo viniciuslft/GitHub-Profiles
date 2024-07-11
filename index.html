@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- fontawesome p/ icones -->
 </head>
 <body>
+    <header>
+        <div id="top" class="header-container">
+            <img src="img/giticon.png" alt="GitHub Logo">
+            <h1>GitHub Profiles</h1>
+        </div>
+    </header>
+
     <div id="app"> <!-- VUE 3 -->
         <div v-if="showSearch" class="search">
             <input v-model="username" placeholder="Digite um nome de usuário">
-            <button @click="fetchUser">Buscar</button>
+            <button id="search-button" @click="fetchUser">
+                <i class="fa fa-search"></i>
+            </button>
+            
         </div>
         <div v-else>
             <div class="nav">
