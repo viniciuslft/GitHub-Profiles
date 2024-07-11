@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Usuários do GitHub</title>
+    <link rel="shortcut icon" href="img/giticon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> <!-- fontawesome p/ icones -->
 </head>
@@ -17,14 +18,12 @@
 
     <div id="app"> <!-- VUE 3 -->
         <div v-if="showSearch" class="search">
-            
             <div class="input-container">
-                <input v-model="username" placeholder="Digite um nome de usuário">
+                <input v-model="username" @keyup.enter="fetchUser" placeholder="Digite um nome de usuário">
                 <button id="search-button" @click="fetchUser">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
-
         </div>
         <div v-else>
             <div class="nav">
