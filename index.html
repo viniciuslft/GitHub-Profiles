@@ -17,10 +17,13 @@
 
     <div id="app"> <!-- VUE 3 -->
         <div v-if="showSearch" class="search">
-            <input v-model="username" placeholder="Digite um nome de usuário">
-            <button id="search-button" @click="fetchUser">
-                <i class="fa fa-search"></i>
-            </button>
+            
+            <div class="input-container">
+                <input v-model="username" placeholder="Digite um nome de usuário">
+                <button id="search-button" @click="fetchUser">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
 
         </div>
         <div v-else>
