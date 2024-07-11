@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Usuários do GitHub</title>
+</head>
+<body>
+    <div id="app">
+        <div v-if="showSearch" class="search">
+            <input v-model="username" placeholder="Digite um nome de usuário">
+            <button @click="fetchUser">Buscar</button>
+        </div>
+        <div v-else>
+            <h2>{{ user.name }}</h2>
+            <p>{{ user.bio }}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
