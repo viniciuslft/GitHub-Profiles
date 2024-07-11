@@ -43,6 +43,16 @@ const app = Vue.createApp({
                     console.error('Erro ao buscar repositórios:', error);
                 });
         },
+        reset() {
+            this.showSearch = true;
+            this.username = '';
+            this.user = {};
+            this.repos = [];
+            this.filter = '';
+            this.view = 'repos';
+            this.repoCount = '';
+            this.starredCount = '';
+        }
     }
 });
 
