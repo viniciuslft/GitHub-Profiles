@@ -6,6 +6,11 @@ const app = Vue.createApp({
             showSearch: true,
             username: '',
             user: {},
+            repos: [],
+            filter: '',
+            view: 'repos',
+            repoCount: '',
+            starredCount: ''
         };
     },
     methods: {

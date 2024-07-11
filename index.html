@@ -25,6 +25,14 @@
                 <h2>{{ user.name }}</h2>
                 <p>{{ user.bio }}</p>
             </div>
+            <div class="search input-container">
+                <input v-model="filter" placeholder="Filtrar por nome">
+            </div>
+            <div v-for="repo in filteredRepos" :key="repo.id" id="repo">
+                <h3><a :href="repo.html_url" target="_blank">{{ repo.name }}</a></h3>
+                <p>{{ repo.description }}</p>
+                <p><i class="fa fa-code"></i> {{ repo.language }}</p>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
