@@ -43,6 +43,28 @@ const app = Vue.createApp({
                     console.error('Erro ao buscar repositórios:', error);
                 });
         },
+        fetchStarred() {
+            axios.get(`https://api.github.com/users/${this.username}/starred`, {
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN}`
+                }
+            })
+                .then(response => {
+                    this.repos = response.data;
+                    this.starredCount = response.data.length;
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar favoritos:', error);
+                });
+        },
+        viewRepos() {
+            this.view = 'repos';
+            this.fetchRepos();
+        },
+        viewStarred() {
+            this.view = 'starred';
+            this.fetchStarred();
+        },
         reset() {
             this.showSearch = true;
             this.username = '';
