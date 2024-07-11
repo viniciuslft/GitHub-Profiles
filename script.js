@@ -24,7 +24,20 @@ const app = Vue.createApp({
                     alert('Usuário não encontrado. Tente novamente.');
                     console.error('Erro:', error);
                 });
-        }
+        },
+        fetchRepos() {
+            axios.get(this.user.repos_url, {
+                headers: {
+                    Authorization: `token ${GITHUB_TOKEN}`
+                }
+            })
+                .then(response => {
+                    this.repos = response.data;
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar repositórios:', error);
+                });
+        },
     }
 });
 
