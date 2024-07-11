@@ -17,6 +17,7 @@ const app = Vue.createApp({
             })
                 .then(response => {
                     this.user = response.data;
+                    this.repoCount = response.data.public_repos;
                     this.showSearch = false;
                 })
                 .catch(error => {

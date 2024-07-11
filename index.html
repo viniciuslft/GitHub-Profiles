@@ -12,9 +12,19 @@
             <button @click="fetchUser">Buscar</button>
         </div>
         <div v-else>
-            <img :src="user.avatar_url" alt="Avatar do Usuário" width="100">
-            <h2>{{ user.name }}</h2>
-            <p>{{ user.bio }}</p>
+            <div class="nav">
+                <p :class="{ selected: view === 'repos' }" @click="viewRepos">
+                    <i class="fa fa-book"></i> Repositórios <span>{{ repoCount }}</span>
+                </p>
+            </div>
+        <div class="profile-container">
+            <div class="profile-image">
+                <img :src="user.avatar_url" alt="Avatar do Usuário" width="100">
+            </div>
+            <div class="profile-info">
+                <h2>{{ user.name }}</h2>
+                <p>{{ user.bio }}</p>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
