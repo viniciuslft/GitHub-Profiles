@@ -20,12 +20,15 @@
             <button id="search-button" @click="fetchUser">
                 <i class="fa fa-search"></i>
             </button>
-            
+
         </div>
         <div v-else>
             <div class="nav">
                 <p :class="{ selected: view === 'repos' }" @click="viewRepos">
                     <i class="fa fa-book"></i> Repositórios <span>{{ repoCount }}</span>
+                </p>
+                <p :class="{ selected: view === 'starred' }" @click="viewStarred">
+                    <i class="fa fa-star"></i> Stars <span>{{ starredCount }}</span>
                 </p>
                 <button @click="reset"><i class="fa-solid fa-rotate-right"></i>reset page</button>
             </div>
