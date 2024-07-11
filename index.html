@@ -12,6 +12,7 @@
             <button @click="fetchUser">Buscar</button>
         </div>
         <div v-else>
+            <img :src="user.avatar_url" alt="Avatar do Usuário" width="100">
             <h2>{{ user.name }}</h2>
             <p>{{ user.bio }}</p>
         </div>
