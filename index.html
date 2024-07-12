@@ -33,16 +33,19 @@
                 <p :class="{ selected: view === 'starred' }" @click="viewStarred">
                     <i class="fa fa-star"></i> Stars <span>{{ starredCount }}</span>
                 </p>
-                <button @click="reset"><i class="fa-solid fa-rotate-right"></i>reset page</button>
+                <button @click="reset"><i class="fa-solid fa-rotate-right"></i>CHANGE USERNAME</button>
             </div>
         <div class="profile-container">
-            <div class="profile-image">
-                <img :src="user.avatar_url" alt="Avatar do Usuário" width="100">
+            <div class="profile">
+                <div class="profile-image">
+                    <img :src="user.avatar_url" alt="Avatar do Usuário" width="100">
+                </div>
+                <div class="profile-info">
+                    <h2>{{ user.name }}</h2>
+                    <p>{{ user.bio }}</p>
+                </div>
             </div>
-            <div class="profile-info">
-                <h2>{{ user.name }}</h2>
-                <p>{{ user.bio }}</p>
-            </div>
+        </div>
             <div class="search input-container">
                 <input v-model="filter" placeholder="Filtrar por nome">
             </div>

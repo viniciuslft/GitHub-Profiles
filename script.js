@@ -1,4 +1,4 @@
-const GITHUB_TOKEN = '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';
+//const GITHUB_TOKEN = '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'; //token github para exceder os limites de taxa da API (coloquei o meu para uso max 30d)
 
 const app = Vue.createApp({
     data() {
@@ -13,16 +13,22 @@ const app = Vue.createApp({
             starredCount: ''
         };
     },
+    computed: {
+        filteredRepos() {
+            return this.repos.filter(repo => repo.name.toLowerCase().includes(this.filter.toLowerCase()));
+        }
+    },
     methods: {
         fetchUser() {
-            axios.get(`https://api.github.com/users/${this.username}`, {
-                headers: {
+            axios.get(`https://api.github.com/users/${this.username}`)
+                /*headers: {
                     Authorization: `token ${GITHUB_TOKEN}`
-                }
-            })
+                }*/
+
                 .then(response => {
                     this.user = response.data;
                     this.repoCount = response.data.public_repos;
+                    this.fetchRepos();
                     this.showSearch = false;
                 })
                 .catch(error => {
@@ -31,11 +37,11 @@ const app = Vue.createApp({
                 });
         },
         fetchRepos() {
-            axios.get(this.user.repos_url, {
-                headers: {
+            axios.get(this.user.repos_url)
+                /*headers: {
                     Authorization: `token ${GITHUB_TOKEN}`
-                }
-            })
+                }*/
+    
                 .then(response => {
                     this.repos = response.data;
                 })
@@ -44,11 +50,12 @@ const app = Vue.createApp({
                 });
         },
         fetchStarred() {
-            axios.get(`https://api.github.com/users/${this.username}/starred`, {
+            axios.get(`https://api.github.com/users/${this.username}/starred`) /*{
                 headers: {
                     Authorization: `token ${GITHUB_TOKEN}`
                 }
-            })
+            }*/
+
                 .then(response => {
                     this.repos = response.data;
                     this.starredCount = response.data.length;
