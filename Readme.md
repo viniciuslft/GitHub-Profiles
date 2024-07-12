@@ -8,19 +8,19 @@ A aplicação consome a <a href="https://docs.github.com/pt/rest?apiVersion=2022
 ## Tecnologias Utilizadas
 
 ### Linguagens:
-- <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  /></a>
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="30" alt="html5 logo"  /></a>
   <img width="12" />
-- <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  /></a>
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="30" alt="css3 logo"  /></a>
   <img width="12" />
-- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  /></a>
+- <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="30" alt="javascript logo"  /></a>
   <img width="12" />
 
 ### Bibliotecas e Frameworks: (adicionados via CDN)
-- <a href="https://vuejs.org/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" height="30" alt="VUEjs logo"/> </a>
+- <a href="https://vuejs.org/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" height="30" alt="VUEjs logo"/></a>
     <img width="12" />
-- <a href="https://axios-http.com/ptbr/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain-wordmark.svg" height="30" alt="Axios logo"/></a> 
+- <a href="https://axios-http.com/ptbr/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain-wordmark.svg" height="30" alt="Axios logo"/></a> 
     <img width="18" />
-- <a href="https://fontawesome.com/icons"><img src="https://static-00.iconduck.com/assets.00/font-awesome-icon-1024x1024-n1norbzq.png" height="30" alt="FontAwesome logo"/> </a>
+- <a href="https://fontawesome.com/icons" target="_blank"><img src="https://static-00.iconduck.com/assets.00/font-awesome-icon-1024x1024-n1norbzq.png" height="30" alt="FontAwesome logo"/> </a>
 <img width="12" />
 
 ## Por que essas tecnologias foram utilizadas?
